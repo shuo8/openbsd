@@ -14,7 +14,7 @@ set tabstop=8                   " Set the number of visual spaces per tab
 "set softtabstop=4               " Set the number of spaces a tab counts as
 "set expandtab                   " Write tabs as spaces
 set autoindent                  " Turn on auto-indentation
-set shiftwidth=4                " Set the number of columns to indent with rein$
+set shiftwidth=8                " Set the number of columns to indent with rein$
 filetype indent on              " Allow loading of language specific indentation
 
 "--------------------------------------------------------------------
@@ -32,3 +32,7 @@ set mouse=a                     " Enable mouse support
 set ruler                       " Display the ruler in the bottom right corner
 set cursorline                  " Highlight the current line
 set backspace=indent,eol,start  " Allow backspace to work across lines
+
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
