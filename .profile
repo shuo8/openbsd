@@ -11,7 +11,21 @@ alias vi='vim'
 export vi
 alias c='clear'
 export c
-alias ll='ls -l'
+alias ll='ls -la'
 export ll
 alias la='ls -a'
 export la
+alias reset='ccidctl reset ccid1'
+export reset
+alias show='ccidctl show ccid1'
+export show
+alias yk='ccidctl ykselect ccid1'
+export yk
+alias usbpath='cd /sys/dev/usb'
+export usbpath 
+alias bin='cd /usr/src/usr.bin'
+export bin 
+alias sbin='cd /usr/src/usr.sbin'
+export sbin 
+alias rb='doas reboot'
+export rb
